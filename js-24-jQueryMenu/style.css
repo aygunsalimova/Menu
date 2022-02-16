@@ -1,0 +1,71 @@
+nav {
+    border: 1px solid black;
+    width: 150px;
+    height: 90vh;
+    animation-name: menu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    left: -100px;
+    display: none;
+    background-color: black;
+}
+
+
+/* .container {
+    display: flex;
+    justify-content: space-around;
+} */
+
+@keyframes menu {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+nav ul li {
+    margin-bottom: 30px;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.bar::before {
+    content: '\f0c9';
+    font-family: 'fontAwesome';
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.bar.aktiv::before {
+    content: '\f00d';
+    font-family: 'fontAwesome';
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@keyframes back {
+    from {
+        left: 0;
+    }
+    to {
+        left: -300px;
+    }
+}
+
+nav.active {
+    display: block;
+    /* animation-name: back !important; */
+}
